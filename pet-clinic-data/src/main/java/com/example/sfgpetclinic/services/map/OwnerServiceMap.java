@@ -65,7 +65,6 @@ public class OwnerServiceMap extends AbstracMapService<Owner, Long> implements O
     @Override
     public void deleteById(Long id) {
         super.deleteByid(id);
-
     }
 
     @Override
