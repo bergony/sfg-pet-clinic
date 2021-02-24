@@ -10,6 +10,9 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 

@@ -5,6 +5,8 @@ import com.example.sfgpetclinic.model.Pet;
 import com.example.sfgpetclinic.services.OwnerService;
 import com.example.sfgpetclinic.services.PetService;
 import com.example.sfgpetclinic.services.PetTypeService;
+import lombok.Builder;
+import lombok.Data;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -71,6 +73,10 @@ public class OwnerMapService extends AbstracMapService<Owner, Long> implements O
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
     }
 }
