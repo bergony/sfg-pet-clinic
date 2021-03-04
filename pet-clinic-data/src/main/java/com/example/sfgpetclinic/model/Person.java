@@ -5,6 +5,8 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
+
+@EqualsAndHashCode(callSuper=false)
 @Getter
 @Setter
 @Data
